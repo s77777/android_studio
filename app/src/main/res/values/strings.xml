@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">workshop</string>
+    <string name="workshop_activity1">workshop_activity1</string>
+    <string name="workshop_activity2">workshop_activity2</string>
+    <string-array name="list">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+        <item>Option 4</item>
+        <item>Option 5</item>
+    </string-array>
+</resources>
