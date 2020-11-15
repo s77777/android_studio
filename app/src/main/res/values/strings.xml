@@ -2,6 +2,10 @@
     <string name="app_name">workshop</string>
     <string name="workshop_activity1">workshop_activity1</string>
     <string name="workshop_activity2">workshop_activity2</string>
+    <string name="avengers_movie_name">Avengers:</string>
+    <string name="end_game_movie_name">End Game:</string>
+    <string name="sl_movie_name">StoryLine</string>
+    <string name="back_movie_name">Back</string>
     <string-array name="list">
         <item>Option 1</item>
         <item>Option 2</item>
