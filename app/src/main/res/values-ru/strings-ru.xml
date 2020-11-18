@@ -3,10 +3,20 @@
     <string name="app_name">мастерская</string>
     <string name="workshop_activity1">мастерская главный экран</string>
     <string name="workshop_activity2">мастерская второй экран</string>
-    <string name="avengers_movie_name">Avengers:</string>
-    <string name="end_game_movie_name">End Game:</string>
-    <string name="sl_movie_name">StoryLine</string>
+    <string name="avengers_movie_name">Avengers: \nEnd Game</string>
+    <string name="storyline">StoryLine</string>
     <string name="back_movie_name">Back</string>
+    <string name="age">13+</string>
+    <string name="category">Action, Adventure, Fantasy</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="storylinetext">
+        After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.
+    </string>
+    <string name="cast">Cast</string>
+    <string name="textfoto1">Robert Downey Jr.</string>
+    <string name="textfoto2">Chris Evans</string>
+    <string name="textfoto3">Mark Ruffalo</string>
+    <string name="textfoto4">Chris Hemsworth</string>
     <string-array name="list">
         <item>Пункт 1</item>
         <item>Пункт 2</item>

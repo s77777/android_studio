@@ -6,31 +6,207 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".MovieDetailsActivity">
-
-    <ImageView
-        android:id="@+id/imageViewTop"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bg"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp"/>
-
-    <TextView
-            android:id="@+id/avengers_movie_name"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="16dp"
+        android:orientation="vertical"/>
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/avengers_movie_name"
-            android:textColor="@color/white"
-            android:autoSizeTextType="uniform"
-            app:layout_constraintStart_toStartOf="@+id/imageViewTop"
-            app:autoSizeMinTextSize="12sp"
-            app:autoSizeMaxTextSize="100sp"
-            app:autoSizeStepGranularity="2sp"
-            />
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <ImageView
+                    android:id="@+id/imageViewTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-18dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/age"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/avengers_movie_name"
+                app:layout_constraintStart_toStartOf="@+id/imageViewTop"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewTop" />
+
+            <TextView
+                android:id="@+id/avengers_movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:singleLine="false"
+                android:text="@string/avengers_movie_name"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/age"
+                app:layout_constraintTop_toBottomOf="@+id/age" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/category"
+                android:textColor="#FF3466"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/avengers_movie_name"
+                app:layout_constraintTop_toBottomOf="@+id/avengers_movie_name" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="80dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:indeterminate="false"
+                android:isIndicator="false"
+                android:progressBackgroundTint="@android:color/holo_purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <TextView
+                android:id="@+id/num_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="125"
+                android:textColor="#6D6D80"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <TextView
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/reviews"
+                android:textColor="#6D6D80"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/num_reviews"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <TextView
+                android:id="@+id/storyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/storyline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+            <TextView
+                android:id="@+id/storylinetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto"
+                android:inputType="textMultiLine"
+                android:text="@string/storylinetext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storyline" />
+
+            <TextView
+                android:id="@+id/cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/cast"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storylinetext" />
+
+            <ImageView
+                android:id="@+id/foto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/cast"
+                app:srcCompat="@drawable/foto1"
+                tools:layout_editor_absoluteX="15dp" />
+            <TextView
+                android:id="@+id/textfoto1"
+                android:layout_width="@+id/foto1"
+                android:layout_height="wrap_content"
+                android:text="@string/textfoto1"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="737dp" />
+
+            <ImageView
+                android:id="@+id/foto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/cast"
+                app:srcCompat="@drawable/foto2"
+                tools:layout_editor_absoluteX="113dp" />
+
+            <TextView
+                android:id="@+id/textfoto2"
+                android:layout_width="@+id/foto1"
+                android:layout_height="wrap_content"
+                android:text="@string/textfoto2"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="113dp"
+                tools:layout_editor_absoluteY="737dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
