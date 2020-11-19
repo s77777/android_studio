@@ -12,10 +12,11 @@
         After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.
     </string>
     <string name="cast">Cast</string>
-    <string name="textfoto1">Robert Downey Jr.</string>
-    <string name="textfoto2">Chris Evans</string>
-    <string name="textfoto3">Mark Ruffalo</string>
-    <string name="textfoto4">Chris Hemsworth</string>
+    <string name="textfoto1">Robert \nDowney Jr.</string>
+    <string name="textfoto2">Chris  \nEvans</string>
+    <string name="textfoto3">Mark  \nRuffalo</string>
+    <string name="textfoto4">Chris \nHemsworth</string>
+    <string name="back">Back</string>
     <string-array name="list">
         <item>Option 1</item>
         <item>Option 2</item>

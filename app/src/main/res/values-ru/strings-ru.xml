@@ -17,6 +17,7 @@
     <string name="textfoto2">Chris Evans</string>
     <string name="textfoto3">Mark Ruffalo</string>
     <string name="textfoto4">Chris Hemsworth</string>
+    <string name="back">Back</string>
     <string-array name="list">
         <item>Пункт 1</item>
         <item>Пункт 2</item>
