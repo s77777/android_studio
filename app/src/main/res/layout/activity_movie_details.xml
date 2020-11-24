@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".MovieDetailsActivity">
-    <androidx.constraintlayout.widget.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="16dp"
-        android:orientation="vertical"/>
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,17 +20,16 @@
                 android:scaleType="centerCrop"
                 android:tint="#80000000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/bg" />
 
             <ImageView
                 android:id="@+id/aback"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="58dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
                 app:layout_constraintStart_toStartOf="@+id/imageViewTop"
                 app:layout_constraintTop_toTopOf="@+id/imageViewTop"
                 app:srcCompat="@drawable/arrow" />
@@ -51,13 +39,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
-                android:layout_marginTop="55dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/back"
                 android:textColor="#6D6D80"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/aback"
-                app:layout_constraintTop_toTopOf="@+id/imageViewTop" />
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+                app:layout_constraintStart_toStartOf="@+id/aback"
+                app:layout_constraintTop_toTopOf="@+id/imageViewTop"
+
+                />
 
             <TextView
                 android:id="@+id/age"
@@ -191,16 +182,18 @@
 
             <ImageView
                 android:id="@+id/foto1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:padding="5dp"
                 android:scaleType="fitXY"
-                android:adjustViewBounds="true"
+                app:layout_constraintDimensionRatio="1,1"
                 app:layout_constraintEnd_toStartOf="@+id/foto2"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cast"
-                app:srcCompat="@drawable/foto1" />
+                app:srcCompat="@drawable/foto1"
+                tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/textfoto1"
@@ -211,20 +204,23 @@
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/foto1"
-                app:layout_constraintTop_toBottomOf="@+id/foto1" />
+                app:layout_constraintTop_toBottomOf="@+id/foto1"
+                app:layout_constraintEnd_toEndOf="@+id/foto1"/>
 
             <ImageView
                 android:id="@+id/foto2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:padding="5dp"
                 android:scaleType="fitXY"
-                android:adjustViewBounds="true"
+                app:layout_constraintDimensionRatio="1,1"
                 app:layout_constraintEnd_toStartOf="@+id/foto3"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/foto1"
                 app:layout_constraintTop_toBottomOf="@+id/cast"
-                app:srcCompat="@drawable/foto2" />
+                app:srcCompat="@drawable/foto2"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textfoto2"
@@ -235,20 +231,22 @@
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/foto2"
-                app:layout_constraintTop_toBottomOf="@+id/foto2" />
+                app:layout_constraintTop_toBottomOf="@+id/foto2"
+                app:layout_constraintEnd_toEndOf="@+id/foto2" />
 
             <ImageView
                 android:id="@+id/foto3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:padding="5dp"
                 android:scaleType="fitXY"
-                android:adjustViewBounds="true"
+                app:layout_constraintDimensionRatio="1,1"
                 app:layout_constraintEnd_toStartOf="@+id/foto4"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/foto2"
                 app:layout_constraintTop_toBottomOf="@+id/cast"
-                app:srcCompat="@drawable/foto3" />
+                app:srcCompat="@drawable/foto3"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textfoto3"
@@ -263,16 +261,19 @@
 
             <ImageView
                 android:id="@+id/foto4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:padding="5dp"
                 android:scaleType="fitXY"
+                app:layout_constraintDimensionRatio="1,1"
                 android:adjustViewBounds="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/foto3"
                 app:layout_constraintTop_toBottomOf="@+id/cast"
-                app:srcCompat="@drawable/foto4" />
+                app:srcCompat="@drawable/foto4"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textfoto3"
@@ -289,7 +290,3 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
