@@ -17,6 +17,7 @@
     <string name="textfoto3">Mark  \nRuffalo</string>
     <string name="textfoto4">Chris \nHemsworth</string>
     <string name="back">Back</string>
+    <string name="movies_list">Movies list</string>
     <string-array name="list">
         <item>Option 1</item>
         <item>Option 2</item>
